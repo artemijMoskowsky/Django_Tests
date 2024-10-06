@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+<title>Home</title>
+{% endblock title %}
+
+{% block content %}
+<h1>It`s home page</h1>
+<form name="HomeForm">
+    {% csrf_token %}
+    <input type="text" name="message" value="">
+    <button type="submit">Send</button>
+</form>
+{% endblock content %}
+
+{% block scripts %}
+<script src="{% static 'js/home.js' %}">
+    
+</script>
+{% endblock scripts %}

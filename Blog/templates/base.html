@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% block title %}{% endblock title %}
+        {% block style %}{% endblock style %}
+    </head>
+    <body>
+        <a href="/">Home</a>
+        <a href="/user/login/">Login</a>
+        <a href="/user/registration/">Registration</a>
+        {% block content %}{% endblock content %}
+        {% block scripts %}{% endblock scripts %}
+    </body>
+</html>

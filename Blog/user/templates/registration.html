@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+<title>Registration</title>
+{% endblock title %}
+
+{% block content %}
+<h1>It`s registration page</h1>
+
+<form name="RegistrForm">
+    {% csrf_token %}
+    <h1 id="error"></h1>
+    <input type="text" name="username" placeholder="Enter your name: ">
+    <input type="email" name="email" placeholder="Enter your email: ">
+    <input type="text" name="password" placeholder="Enter your password: ">
+    <button type="submit">Submit</button>
+</form>
+
+{% endblock content %}
+
+{% block scripts %}
+<script src = "{% static 'js/registration.js' %}"></script>
+{% endblock scripts %}
